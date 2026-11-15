@@ -17,11 +17,14 @@
 #' @noRd
 .RandomGaussianSVD <- function(Z,
                                svd) {
-  Z %*% svd$u %*% (
-    t(x = svd$v) * sqrt(
-      x = pmax(
-        svd$d,
-        0
+  # multiply the small k by k matrices first: O(n k^2) instead of two n by k products
+  Z %*% (
+    svd$u %*% (
+      t(x = svd$v) * sqrt(
+        x = pmax(
+          svd$d,
+          0
+        )
       )
     )
   )
