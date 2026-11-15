@@ -1,0 +1,30 @@
+Package: randomGaussian
+Title: Sampling from the Gaussian Distribution
+Version: 0.9.2
+Authors@R: 
+    person(given = "Ivan Jacob Agaloos",
+           family = "Pesigan",
+           role = c("aut", "cre", "cph"),
+           email = "r.jeksterslab@gmail.com",
+           comment = c(ORCID = "0000-0003-4818-8420"))
+Description: Random variates from the multivariate Gaussian distribution
+    using the Cholesky, eigen, or singular value decomposition of the
+    covariance matrix.
+    The internal functions have no input checks and are copied by other
+    projects.
+URL: https://github.com/ijapesigan/randomGaussian, https://ijapesigan.github.io/randomGaussian/
+BugReports: https://github.com/ijapesigan/randomGaussian/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+Depends:
+    R (>= 3.0.0)
+Imports:
+    stats
+Suggests:
+    knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr
+Config/roxygen2/version: 8.1.1.9000

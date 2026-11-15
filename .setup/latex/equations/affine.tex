@@ -1,0 +1,107 @@
+Let $\boldsymbol{X}$ be a $k$-dimensional random vector
+
+$$
+\boldsymbol{X} = 
+\left(
+\begin{array}{c}
+X_{1} \\
+X_{2} \\
+\vdots \\
+X_{k} \\
+\end{array}
+\right)
+$$
+
+$$
+\boldsymbol{X}
+\sim 
+\mathcal{N}_{k}
+\left(
+\boldsymbol{\mu},
+\boldsymbol{\Sigma}
+\right)
+$$
+
+where
+
+$$
+\boldsymbol{\mu} \in \mathbb{R}^{k},
+\boldsymbol{\Sigma} \in \mathbb{R}^{k \times k}
+$$
+
+The affine transformation of $\boldsymbol{X}$ given by $\boldsymbol{Y}$
+
+$$
+\boldsymbol{Y}  =
+\boldsymbol{A}
+\boldsymbol{X}
++
+\boldsymbol{v}
+$$
+
+$$
+\boldsymbol{Y}
+\sim 
+\mathcal{N}_{k}
+\left(
+\boldsymbol{A}
+\boldsymbol{\mu}
++
+\boldsymbol{v},
+\boldsymbol{A}
+\boldsymbol{\Sigma}
+\boldsymbol{A}^{\prime}
+\right)
+$$
+
+$$
+\boldsymbol{Z}
+\sim 
+\mathcal{N}_{k}
+\left(
+\boldsymbol{0},
+\boldsymbol{I}
+\right)
+$$
+
+$$
+\boldsymbol{X}  =
+\boldsymbol{A}
+\boldsymbol{Z}
++
+\boldsymbol{v}
+$$
+
+$$
+\boldsymbol{X}
+\sim 
+\mathcal{N}_{k}
+\left(
+\boldsymbol{A}
+\boldsymbol{0}
++
+\boldsymbol{v},
+\boldsymbol{A}
+\boldsymbol{I}
+\boldsymbol{A}^{\prime}
+\right)
+$$
+
+$$
+\boldsymbol{X}
+\sim 
+\mathcal{N}_{k}
+\left(
+\boldsymbol{v},
+\boldsymbol{A}
+\boldsymbol{A}^{\prime}
+\right)
+$$
+
+$$
+\boldsymbol{\mu} = 
+\boldsymbol{v},
+\boldsymbol{\Sigma} =
+\boldsymbol{A}
+\boldsymbol{A}^{\prime}
+$$

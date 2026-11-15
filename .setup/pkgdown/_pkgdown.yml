@@ -1,0 +1,13 @@
+destination: pkgdown
+url: https://ijapesigan.github.io/randomGaussian/
+
+template:
+  package: rProject
+
+articles:
+- title: Getting Started
+  contents:
+  - randomGaussian
+- title: Session Information
+  contents:
+  - session

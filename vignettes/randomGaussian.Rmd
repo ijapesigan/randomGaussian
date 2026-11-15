@@ -1,0 +1,84 @@
+---
+title: "randomGaussian: Sampling from the Gaussian Distribution"
+author: "Ivan Jacob Agaloos Pesigan"
+output: rmarkdown::html_vignette
+bibliography: "vignettes.bib"
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
+nocite: |
+  @RCoreTeam-2026
+vignette: >
+  %\VignetteIndexEntry{randomGaussian: Sampling from the Gaussian Distribution}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+#| include = FALSE
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Description
+
+Random variates from the multivariate Gaussian distribution in R [@RCoreTeam-2026]
+using the Cholesky, eigen, or singular value decomposition
+of the covariance matrix.
+
+## Installation
+
+You can install the development version of `randomGaussian` from
+[GitHub](https://github.com/ijapesigan/randomGaussian) with:
+
+```r
+if (!require("pak")) install.packages("pak")
+pak::pkg_install("ijapesigan/randomGaussian")
+```
+
+## Example
+
+```{r}
+library(package = "randomGaussian")
+```
+
+A covariance matrix and a mean vector of three variables.
+
+```{r}
+k <- 3
+sigma <- stats::toeplitz(x = (k:1) / k)
+mu <- c(1, 2, 3)
+sigma
+```
+
+`RandomGaussian()` draws `n` rows
+using the Cholesky decomposition by default.
+The `decomposition` argument also accepts `"eigen"` and `"svd"`,
+which work for positive semi-definite covariance matrices.
+
+```{r}
+set.seed(seed = 42)
+x <- RandomGaussian(n = 10000, Sigma = sigma, mu = mu)
+utils::head(x = x)
+colMeans(x = x)
+stats::cov(x = x)
+```
+
+```{r}
+x_eigen <- RandomGaussian(
+  n = 10000,
+  Sigma = sigma,
+  mu = mu,
+  decomposition = "eigen"
+)
+colMeans(x = x_eigen)
+stats::cov(x = x_eigen)
+```
+
+## Documentation
+
+See
+[GitHub Pages](https://ijapesigan.github.io/randomGaussian)
+for package documentation.
+
+## References
