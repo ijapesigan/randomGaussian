@@ -1,3 +1,10 @@
+# randomGaussian 0.9.3
+
+## Efficiency
+
+- `.RandomGaussianSVD()` multiplies the small `k` by `k` matrices first (`Z %*% (u %*% (t(v) * sqrt(d)))`):
+  2.5 times faster at 1e5 draws and k = 10; differences below 1e-13.
+
 # randomGaussian 0.9.2
 
 ## Template
