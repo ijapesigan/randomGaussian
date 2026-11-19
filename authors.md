@@ -11,12 +11,12 @@ Source:
 [`inst/CITATION`](https://github.com/ijapesigan/randomGaussian/blob/main/inst/CITATION)
 
 Pesigan, I. J. A. (2023). randomGaussian: Sampling from the Gaussian
-Distribution. R package version 0.9.3.
+Distribution. R package version 0.9.4.
 https://github.com/jeksterslab/randomGaussian
 
 @Manual{,\
   author = {Ivan Jacob Agaloos Pesigan},\
   title = {randomGaussian: Sampling from the Gaussian Distribution},\
   year = {2023},\
-  note = {R package version 0.9.3},\
+  note = {R package version 0.9.4},\
 }

@@ -1,5 +1,12 @@
 # Changelog
 
+## randomGaussian 0.9.4
+
+### Patch
+
+- Wrapped a comment line in `.RandomGaussianSVD()` that was over 80
+  characters (the public lint check failed on 0.9.3).
+
 ## randomGaussian 0.9.3
 
 ### Efficiency
