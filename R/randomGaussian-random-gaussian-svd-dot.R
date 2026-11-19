@@ -17,7 +17,8 @@
 #' @noRd
 .RandomGaussianSVD <- function(Z,
                                svd) {
-  # multiply the small k by k matrices first: O(n k^2) instead of two n by k products
+  # multiply the small k by k matrices first:
+  # O(n k^2) instead of two n by k products
   Z %*% (
     svd$u %*% (
       t(x = svd$v) * sqrt(

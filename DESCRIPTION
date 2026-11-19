@@ -1,6 +1,6 @@
 Package: randomGaussian
 Title: Sampling from the Gaussian Distribution
-Version: 0.9.3
+Version: 0.9.4
 Authors@R: 
     person(given = "Ivan Jacob Agaloos",
            family = "Pesigan",
